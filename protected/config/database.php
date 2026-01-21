@@ -2,13 +2,10 @@
 
 // This is the database connection configuration.
 return array(
-	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-	// uncomment the following lines to use a MySQL database
-	/*
-	'connectionString' => 'mysql:host=localhost;dbname=testdrive',
-	'emulatePrepare' => true,
-	'username' => 'root',
-	'password' => '',
-	'charset' => 'utf8',
-	*/
+	'connectionString' => 'mysql:host=mysql;dbname=book_catalog',
+    'emulatePrepare' => true,
+    'username' => 'book_user',
+    'password' => 'password123',
+    'charset' => 'utf8',
+    'tablePrefix' => '',
 );
