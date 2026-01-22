@@ -1,15 +1,50 @@
 FROM php:7.4-apache
 
-# Устанавливаем расширения PHP
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+# Устанавливаем системные зависимости
 RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg-dev \
-    && docker-php-ext-configure gd --with-jpeg \
-    && docker-php-ext-install gd
+    libzip-dev \
+    zip \
+    unzip \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Устанавливаем расширения PHP
+RUN docker-php-ext-configure gd --with-jpeg \
+    && docker-php-ext-install -j$(nproc) \
+    pdo \
+    pdo_mysql \
+    mysqli \
+    gd \
+    zip
 
 # Включаем mod_rewrite для Apache
 RUN a2enmod rewrite
 
-# Настраиваем Apache
+# Настраиваем Apache для Yii
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+RUN sed -i 's!/var/www/html!/var/www/html!g' /etc/apache2/sites-available/000-default.conf
+
+# Устанавливаем Composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Создаем папку для приложения
+WORKDIR /var/www/html
+
+# Копируем файлы проекта (копируем позже через volumes)
+# COPY . /var/www/html
+
+# Настраиваем права
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 755 /var/www/html
+
+# Создаем папки для Yii
+RUN mkdir -p /var/www/html/protected/runtime \
+    && mkdir -p /var/www/html/protected/data \
+    && mkdir -p /var/www/html/assets \
+    && chmod -R 777 /var/www/html/protected/runtime \
+    /var/www/html/protected/data \
+    /var/www/html/assets
+
+EXPOSE 80
