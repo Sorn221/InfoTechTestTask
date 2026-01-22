@@ -10,12 +10,11 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Устанавливаем расширения PHP
 RUN docker-php-ext-configure gd --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
     pdo \
-    pdo_mysql \
-    mysqli \
+    pdo_mysql \      
+    mysqli \         
     gd \
     zip
 
@@ -24,16 +23,12 @@ RUN a2enmod rewrite
 
 # Настраиваем Apache для Yii
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
-RUN sed -i 's!/var/www/html!/var/www/html!g' /etc/apache2/sites-available/000-default.conf
 
 # Устанавливаем Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Создаем папку для приложения
 WORKDIR /var/www/html
-
-# Копируем файлы проекта (копируем позже через volumes)
-# COPY . /var/www/html
 
 # Настраиваем права
 RUN chown -R www-data:www-data /var/www/html \

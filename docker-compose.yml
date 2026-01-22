@@ -5,7 +5,7 @@ services:
     build: .
     container_name: yii1_web
     ports:
-      - "8080:80"  # поменял на стандартный 8080
+      - "8088:80"
     volumes:
       - .:/var/www/html
       - ./protected/runtime:/var/www/html/protected/runtime
@@ -44,7 +44,7 @@ services:
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
     ports:
-      - "8089:80"
+      - "8087:80"
     restart: always
 
 volumes:

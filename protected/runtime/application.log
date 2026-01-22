@@ -16,3 +16,722 @@ Stack trace:
 #11 /var/www/html/protected/yiic.php(7): require_once('/var/www/html/f...')
 #12 {main}
 ---
+2026/01/22 04:30:33 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(472): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(481): MigrateCommand->getDbConnection()
+#5 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(512): MigrateCommand->getMigrationHistory()
+#6 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(84): MigrateCommand->getNewMigrations()
+#7 [internal function]: MigrateCommand->actionUp()
+#8 /home/user/projects/InfoTechTestTask/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs()
+#9 /home/user/projects/InfoTechTestTask/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run()
+#10 /home/user/projects/InfoTechTestTask/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#11 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/user/projects/InfoTechTestTask/framework/yiic.php(33): CApplication->run()
+#13 /home/user/projects/InfoTechTestTask/protected/yiic.php(7): require_once('...')
+#14 {main}
+---
+2026/01/22 04:32:32 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(472): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(481): MigrateCommand->getDbConnection()
+#5 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(512): MigrateCommand->getMigrationHistory()
+#6 /home/user/projects/InfoTechTestTask/framework/cli/commands/MigrateCommand.php(84): MigrateCommand->getNewMigrations()
+#7 [internal function]: MigrateCommand->actionUp()
+#8 /home/user/projects/InfoTechTestTask/framework/console/CConsoleCommand.php(177): ReflectionMethod->invokeArgs()
+#9 /home/user/projects/InfoTechTestTask/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run()
+#10 /home/user/projects/InfoTechTestTask/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#11 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CConsoleApplication->processRequest()
+#12 /home/user/projects/InfoTechTestTask/framework/yiic.php(33): CApplication->run()
+#13 /home/user/projects/InfoTechTestTask/protected/yiic.php(7): require_once('...')
+#14 {main}
+---
+2026/01/22 04:35:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'book_catalog.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2026/01/22 04:35:39 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:35:44 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:35:45 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:36:33 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:36:34 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:36:39 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:36:48 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/model/ModelCode.php(60): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:38:26 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/model/ModelCode.php(60): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:38:27 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/model/ModelCode.php(60): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:38:30 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:40:08 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:43:01 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:43:02 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:43:05 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:56:46 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:58:17 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:58:18 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 04:58:39 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:01:18 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:01:19 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:02:05 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:02:17 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:05:22 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:05:25 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:05:26 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:05:27 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:05:35 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:08:00 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:10:12 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:10:14 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
+2026/01/22 05:10:15 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/user/projects/InfoTechTestTask/framework/db/CDbConnection.php(325): CDbConnection->setActive()
+#2 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/user/projects/InfoTechTestTask/framework/base/CModule.php(103): CModule->getComponent()
+#4 /home/user/projects/InfoTechTestTask/framework/gii/generators/crud/CrudCode.php(44): CModule->__get()
+#5 /home/user/projects/InfoTechTestTask/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/user/projects/InfoTechTestTask/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/user/projects/InfoTechTestTask/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/user/projects/InfoTechTestTask/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /home/user/projects/InfoTechTestTask/framework/web/CController.php(286): CController->runAction()
+#11 /home/user/projects/InfoTechTestTask/framework/web/CController.php(265): CController->runActionWithFilters()
+#12 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(282): CController->run()
+#13 /home/user/projects/InfoTechTestTask/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/user/projects/InfoTechTestTask/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/user/projects/InfoTechTestTask/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8089/index.php?r=gii/default/index
+---
