@@ -15,19 +15,37 @@ class UserIdentity extends CUserIdentity
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
 	 */
+	// public function authenticate()
+	// {
+	// 	$users=array(
+	// 		// username => password
+	// 		'demo'=>'demo',
+	// 		'admin'=>'admin',
+	// 	);
+	// 	if(!isset($users[$this->username]))
+	// 		$this->errorCode=self::ERROR_USERNAME_INVALID;
+	// 	elseif($users[$this->username]!==$this->password)
+	// 		$this->errorCode=self::ERROR_PASSWORD_INVALID;
+	// 	else
+	// 		$this->errorCode=self::ERROR_NONE;
+	// 	return !$this->errorCode;
+	// }
+
 	public function authenticate()
-	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
-	}
+    {
+        $user = User::model()->find('username=:username', [':username'=>$this->username]);
+        
+        if($user === null)
+            $this->errorCode = self::ERROR_USERNAME_INVALID;
+        elseif(!CPasswordHelper::verifyPassword($this->password, $user->password))
+            $this->errorCode = self::ERROR_PASSWORD_INVALID;
+        else {
+            $this->errorCode = self::ERROR_NONE;
+            $this->setState('id', $user->id);
+            $this->setState('username', $user->username);
+        }
+        
+        return !$this->errorCode;
+    }
+
 }

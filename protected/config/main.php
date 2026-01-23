@@ -32,22 +32,34 @@ return array(
 	// application components
 	'components'=>array(
 
+		'authManager'=>array(
+			'class'=>'CDbAuthManager',
+			'connectionID'=>'db',
+			'itemTable'=>'auth_item',
+			'itemChildTable'=>'auth_item_child',
+			'assignmentTable'=>'auth_assignment',
+		),
+		
 		'user'=>array(
-			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+			'class'=>'WebUser',
 		),
 
-		// uncomment the following to enable URLs in path-format
-		/*
+		'sms'=>array(
+			'class'=>'SmsService',
+		),
+
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
+				'report/top-authors/<year:\d{4}>' => 'report/topAuthors',
+				'report/top-authors' => 'report/topAuthors',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		*/
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
